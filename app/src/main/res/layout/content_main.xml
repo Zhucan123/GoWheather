@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:scrollbars="none">
+<LinearLayout
+    android:id="@+id/content_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/temBack"
+
+       >
+
+        <TableLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,2,"
+            android:layout_below="@+id/temperature"
+            android:layout_alignLeft="@+id/temperature"
+            android:layout_alignStart="@+id/temperature"
+            android:id="@+id/tableLayout">
+
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2,"
+            android:layout_marginBottom="23dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+         <TableRow
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="33dp"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentStart="true"
+             >
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="风向"
+                 android:textSize="20dp"
+                 android:id="@+id/wind"
+                 android:textColor="@color/colorText"
+                 android:layout_gravity="center"/>
+
+             <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:text="相对湿度"
+                 android:textSize="20dp"
+                 android:textColor="@color/colorText"
+                 android:layout_gravity="center" />
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:textSize="20dp"
+                 android:textColor="@color/colorText"
+                 android:text="体感温度"/>
+         </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="风力等级"
+                    android:id="@+id/wind1"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorText"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="湿度"
+                    android:id="@+id/humidity1"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorText"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="温度"
+                    android:textSize="20dp"
+                    android:id="@+id/bodyTem"
+                    android:textColor="@color/colorText"
+                    android:layout_gravity="center"/>
+            </TableRow>
+     </TableLayout>
+
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageButton"
+            android:background="@drawable/turnbutton"
+            android:layout_marginRight="23dp"
+            android:layout_marginEnd="23dp"
+            android:layout_alignTop="@+id/temperature"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+<TableLayout
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/temperature"
+    android:layout_alignLeft="@+id/tableLayout"
+    android:layout_alignStart="@+id/tableLayout"
+    android:stretchColumns="0,1,2,">
+        <TableRow
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="地区"
+                android:textSize="15dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/site"/>
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:src="@color/colorGray"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="天气"
+                android:textSize="15dp"
+                android:id="@+id/weather1"
+                android:layout_gravity="center_horizontal"/>
+
+        </TableRow>
+</TableLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="60dp"
+            android:text="温度"
+            android:id="@+id/temperature"
+            android:layout_marginLeft="39dp"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="21dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp">
+        <TableRow>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/weatherbg"
+                android:id="@+id/todayImage"/>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="220dp"
+                android:orientation="vertical"
+                android:paddingLeft="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今日"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天氣"
+                    android:id="@+id/todayWeather"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="溫度"
+                android:textSize="18dp"
+                android:id="@+id/todayTem"/>
+
+        </TableRow>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:paddingLeft="300dp"
+            android:background="@color/colorGray"/>
+        <TableRow>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/weatherbg1"
+                android:id="@+id/tomorrowImage"/>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="220dp"
+                android:orientation="vertical"
+                android:paddingLeft="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="明天"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天氣"
+                    android:id="@+id/tomorrowWeather"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:text="溫度"
+                android:id="@+id/tomorrowTem"/>
+
+        </TableRow>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:paddingLeft="300dp"
+            android:background="@color/colorGray"/>
+        <TableRow>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/weatherbg2"
+                android:id="@+id/threeImage"/>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="220dp"
+                android:orientation="vertical"
+                android:paddingLeft="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="后天"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天氣"
+                    android:id="@+id/threeWeather"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:text="溫度"
+                android:id="@+id/threeTem"/>
+
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/colorGray"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="生活指数"
+            android:paddingLeft="20dp"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/weatherList"
+            android:dividerHeight="5dp"
+
+
+            >
+
+        </ListView>
+    </LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>
